@@ -143,7 +143,7 @@ After deploying the smart contracts, note the contract addresses and update the 
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or clone the repository and submit a pull request on GitHub.
 
-For detailed guidelines on how to contribute, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md).  
+For detailed guidelines on how to contribute, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file  
 
 ## License
 
