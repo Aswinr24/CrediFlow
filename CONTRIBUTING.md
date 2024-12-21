@@ -15,7 +15,7 @@ Clone your forked repository to your local machine using the following command:
 
 ```bash
 git clone https://github.com/Aswinr24/CrediFlow.git
-cd crediflow
+cd CrediFlow
 ```
 
 ### 3. Create a New Branch
