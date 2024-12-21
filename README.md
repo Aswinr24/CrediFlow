@@ -142,3 +142,7 @@ After deploying the smart contracts, note the contract addresses and update the 
 ## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or clone the repository and submit a pull request on GitHub.
+
+## License
+
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details
