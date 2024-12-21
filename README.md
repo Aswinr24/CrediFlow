@@ -1,33 +1,31 @@
-### CrediFlow- The Finance Supply Chain
+# CrediFlow
 
-Link to PPT / Slides: [https://docs.google.com/presentation/d/18BE7X7MnTkaE48KhTZXJEsm-Hqly9jGO](https://docs.google.com/presentation/d/18BE7X7MnTkaE48KhTZXJEsm-Hqly9jGO/edit?usp=sharing&ouid=112685132944051023680&rtpof=true&sd=true)
+CrediFlow transforms supply chain finance by eliminating inefficiencies, enhancing transparency, and building trust.It streamlines buyer-supplier interactions, secures digital payments, and ensures seamless document management with decentralized storage. CrediFlow brings speed, security, and simplicity to supply chain operations.
 
-#### Problem Statement
 
-Traditional supply chain finance processes are riddled with inefficiencies, limited transparency, and high costs, fraud and security risks, primarily due to manual, paper-based operations, effective communication between buyers, suppliers, and other stakeholders is challenging, and the involvement of multiple intermediaries. These issues lead to slow processing times, increased error rates, and elevated financing costs. Additionally, the lack of a unified, real-time view of the supply chain and a secure platform for transaction verification fosters a trust deficit among suppliers, buyers, and financial institutions. This mistrust, coupled with frequent payment delays, adversely impacts suppliers' cash flow and financial stability. Ineffective risk management further exacerbates operational disruptions and financial losses.
+## Key Features  
 
-Our Project CrediFlow aims to solve these problems by leveraging blockchain technology to create a transparent, efficient, and secure supply chain finance ecosystem, improving cash flow, reducing financing costs, and enhancing trust among all participants.
+- 🏗️ **Direct Buyer-Supplier Interaction**  
+  Eliminate intermediaries by enabling direct communication between buyers and suppliers, streamlining processes, and reducing third-party reliance.  
 
-#### Our Approach / Idea / Solution
+- ⚙️ **Comprehensive Functionality**  
+  Supports a variety of supply chain use cases, including:  
+  - 📑 Purchase ordering  
+  - 💸 Dynamic discounting  
+  - 🌍 Cross-border trading  
+  - 🛡️ Supplier risk assessment  
 
-Decentralized supply chain finance solution CrediFlow which leverages blockchain tech to enhance transparency, security, and efficiency in financing supply chain activities. This solution enables suppliers, buyers, and financial institutions to interact on a shared, decentralized ledger, automating processes like invoice financing, dynamic discounting, and trade financing through smart contracts. The main goal is to improve cash flow, reduce financing costs, and increase trust among all participants in the supply chain.
+- 🔒 **Secure Digital Payments**  
+  Implements an escrow system to ensure safe and reliable cryptocurrency transactions, mitigating fraud risks.  
 
-##### Key Features:
+- ⚡ **Fast and Cost-Effective Transactions**  
+  Facilitates quick and low-cost digital payments using cryptocurrencies or digital tokens.  
 
-- Ensuring Transparency: Maintain an immutable, transparent ledger of all transactions on the blockchain.
+- 📂 **Decentralized Document Storage**  
+  Leverages IPFS services like lighthouse.storage to securely store and share documents, ensuring data integrity and accessibility.  
 
-- Direct Buyer-Supplier Interaction: Eliminate intermediaries by creating a direct link between buyers and suppliers, streamlining the process and reducing reliance on third parties.
 
-- Automating Transactions: Use smart contracts to automate purchase orders, invoicing, and payments, reducing manual paperwork and errors.
-- Comprehensive Features: Facilitate different use cases like purchase ordering, dynamic discounting, cross-border trading, and supplier risk assessment to optimize supply chain operations and financial management.
-
-- Securing Digital Payments: Implement an escrow system specifically for digital payments (cryptocurrencies), ensuring commitment and mitigating fraud risk.
-
-- Facilitating Digital Payments: Enable fast, cost-effective transactions using digital tokens or cryptocurrencies.
-
-- Decentralized Storage: Utilize IPFS (InterPlanetary File System) service- Web3.storage/lighthouse for securely storing and sharing documents and details, ensuring data integrity and availability.
-
-#### Architecture / WorkFlow
+## Architecture / WorkFlow
 
 Let us consider an example use case here, PURCHASE ORDERING
 
@@ -35,20 +33,112 @@ Let us consider an example use case here, PURCHASE ORDERING
 
 ![image](https://github.com/user-attachments/assets/dd1ccc86-86df-4160-9bdc-934bcc585a38)
 
-#### Tech Stack
+## Getting Started
 
-- Solidity for writing smart contracts
+### Prerequisites
 
-- Hardhat for testing and deploying smart contracts
+Ensure you have the following installed:
 
-- Next js(Typescript) for building the user interface (UI) for the platform.
+- Node.js (v16 or higher)
+- npm package manager
+- A compatible crypto wallet (e.g., MetaMask/Phantom)
 
-- Express js for building the API layer of the application
+  
+### Installation
 
-- Wagmi library for interacting with the smart contract functions
+Clone the repository:
 
-- WalletConnect AppKit / Rainbow kit library for wallet connection
+```bash
+git clone https://github.com/Aswinr24/CrediFlow.git
+```
 
-- Web3.storage/Lighthouse IPFS storage services
+Navigate to the project directory:
+```bash
+cd CrediFlow
+```
 
-- Push Protocol SDK for establishing a Communication layer between the Stakeholders
+Install dependencies:
+```bash
+npm i
+```
+
+#### Environment Setup
+
+Create a .env file in the root directory and configure the following variables:
+
+```env
+NEXT_PUBLIC_CONTRACT1_ADDRESS=<deployed-contract1-address>
+NEXT_PUBLIC_CONTRACT2_ADDRESS=<deployed-contract2-address>
+NEXT_PUBLIC_SERVER_URL=<url-of-backend-server-running-app.js>
+NEXT_PUBLIC_PROJECT_ID=<wallet-connect-project-id>
+LIGHTHOUSE_API_KEY=<your-lighthouse-api-key>
+```
+
+#### Run Locally
+
+Start the development server for UI:
+
+```bash
+npm run dev
+```
+
+Start the backend server for IPFS Storage APIs:
+
+```bash
+node app.js
+```
+
+#### Build for Production
+
+Build the application for production:
+
+```bash
+npm run build
+npm start
+```
+
+### Smart Contracts Deployment
+
+Navigate to the Contracts Directory
+
+```bash
+cd Crediflow_contracts 
+```
+
+Install Dependencies for Hardhat
+
+```bash
+npm i
+```
+
+#### Environment Setup for Smart Contracts
+
+Create a .env file in the contracts directory and configure the following variables:
+
+```env
+API_KEY=<YOUR_ALCHEMY_API_KEY>
+PRIVATE_KEY=<YOUR_WALLET_PRIVATE_KEY>
+```
+
+#### Compile Smart Contracts
+
+Compile the smart contracts using Hardhat:
+
+```bash
+npx hardhat compile
+```
+#### Deploy Smart Contracts
+
+Deploy the contracts to the Polygon zkEVM cardona test network:
+
+```
+npx hardhat run scripts/deploy.js --network zkEVMTestnet
+```
+
+#### Update Contract Address
+
+After deploying the smart contracts, note the contract addresses and update the ```NEXT_PUBLIC_SMART_CONTRACT1_ADDRESS``` and ```NEXT_PUBLIC_CONTRACT2_ADDRESS``` variables in the .env file of the UI directory.
+
+## Contributing
+
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or clone the repository and submit a pull request on GitHub.
